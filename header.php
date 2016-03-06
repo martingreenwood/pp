@@ -22,7 +22,7 @@
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class($pagename); ?>>
 <section id="page" class="hfeed site">
 
 	<header id="header">

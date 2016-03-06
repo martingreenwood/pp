@@ -44,7 +44,12 @@
 		<div class="section two">
 
 			<div class="item two empty">
-
+				<div class="table">
+					<div class="cell">
+						<h3>I have worked with Martin on two new websites for a complicated project. Martin at Pixel Pudu has made this process painless and has taken the time to understand the needs of the project and has matched the brief perfectly. It’s refreshing to feel the outward patience as requirements have changed across the development process. I am looking forward to working with him further in the future.</h3>
+						<p>Stephen Skrypec, Head of Communications. New Wolsey Theatre</p>
+					</div>
+				</div>
 			</div>
 
 		<?php
@@ -94,10 +99,14 @@
 		<?php endif; ?>
 
 			<div class="item five empty">
-			
 			</div>
 			<div class="item six empty">
-			
+				<div class="table">
+					<div class="cell">
+						<h3>"Always prompt and ever precise, Martin's work is superb. I would recommend him without hesitation."</h3>
+						<p>Mark Marriott, Operations Manager. Brewery Arts Centre Kendal</p>
+					</div>
+				</div>
 			</div>
 
 		<?php

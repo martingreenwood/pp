@@ -3,8 +3,8 @@
 // Neat Overrides
 $column: 78px;
 $gutter: 20px;
-$grid-columns: 12;
-$max-width: em(1170);
+$grid-columns: 1;
+$max-width: 1170px;
 
 $visual-grid: false;
 $visual-grid-color: #eee;
@@ -12,9 +12,9 @@ $visual-grid-index: back;
 $visual-grid-opacity: 0.2;
 
 // Neat Breakpoints
-$small-screen: em(240);
-$medium-screen: em(640);
-$large-screen: em(960);
+$small-screen: 240px;
+$medium-screen: 640px;
+$large-screen: 960px;
 
 $small-screen-up: new-breakpoint(min-width $small-screen 1);
 $medium-screen-up: new-breakpoint(min-width $medium-screen 6);

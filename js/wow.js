@@ -12,6 +12,11 @@ $j(".menu-toggle").on('click', function() {
 	$j("nav ul").toggleClass('hidden');
 });
 
+// matchheight
+
+$j(function($) {
+	$('.column').matchHeight();
+});	
 
 $j(function($) {
 
