@@ -15,7 +15,7 @@ $j(".menu-toggle").on('click', function() {
 // matchheight
 
 $j(function($) {
-	$('.column').matchHeight();
+	$j('.column').matchHeight();
 });	
 
 $j(function($) {
@@ -23,11 +23,11 @@ $j(function($) {
 	$(window).scroll(function() {    
 	    var scroll = $(window).scrollTop();
 	    if (scroll >= 1 ) {
-	        $("#header").addClass("scroll");
-	        $('.arrow').fadeOut('fast');
+	        $j("#header").addClass("scroll");
+	        $j('.arrow').fadeOut('fast');
 	    } else {
-	        $("#header").removeClass("scroll");
-	        $('.arrow').show('fast');
+	        $j("#header").removeClass("scroll");
+	        $j('.arrow').show('fast');
 	    }
 	});
 });
@@ -35,29 +35,29 @@ $j(function($) {
 // PARALAX
 
 $j(function($) {
-  if ($("#js-parallax-window").length) {
+  if ($j("#js-parallax-window").length) {
     parallax();
   }
 });
 
 $j(function($) {
-	$(window).scroll(function(e) {
-		if ($("#js-parallax-window").length) {
+	$j(window).scroll(function(e) {
+		if ($j("#js-parallax-window").length) {
 			parallax();
 		}
 	});
 });
 
 function parallax(){
-  if( $("#js-parallax-window").length > 0 ) {
-    var plxBackground = $("#js-parallax-background");
-    var plxWindow = $("#js-parallax-window");
+  if( $j("#js-parallax-window").length > 0 ) {
+    var plxBackground = $j("#js-parallax-background");
+    var plxWindow = $j("#js-parallax-window");
 
-    var plxWindowTopToPageTop = $(plxWindow).offset().top;
-    var windowTopToPageTop = $(window).scrollTop();
+    var plxWindowTopToPageTop = $j(plxWindow).offset().top;
+    var windowTopToPageTop = $j(window).scrollTop();
     var plxWindowTopToWindowTop = plxWindowTopToPageTop - windowTopToPageTop;
 
-    var plxBackgroundTopToPageTop = $(plxBackground).offset().top;
+    var plxBackgroundTopToPageTop = $j(plxBackground).offset().top;
     var windowInnerHeight = window.innerHeight;
     var plxBackgroundTopToWindowTop = plxBackgroundTopToPageTop - windowTopToPageTop;
     var plxBackgroundTopToWindowBottom = windowInnerHeight - plxBackgroundTopToWindowTop;
