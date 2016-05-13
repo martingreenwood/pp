@@ -38,13 +38,8 @@
 
 		</div>
 
-		<div class="image column">
-	
-			<?php $challenge_image = get_field('challenge_image'); if ($challenge_image): ?>
-			<img src="<?php echo $challenge_image['url']; ?>">
-			<?php endif; ?>
-		
-		</div>
+		<?php $challenge_image = get_field('challenge_image'); ?>
+		<div class="image column" style="background-image: url(<?php echo $challenge_image['url']; ?>);"></div>
 		
 	</div>
 
@@ -55,13 +50,8 @@
 
 	<div class="wrap">
 
-		<div class="image column">
-	
-			<?php $solution_image = get_field('solution_image'); if ($solution_image): ?>
-			<img src="<?php echo $solution_image['url']; ?>">
-			<?php endif; ?>
-		
-		</div>
+		<?php $solution_image = get_field('solution_image'); ?>
+		<div class="image column" style="background-image: url(<?php echo $solution_image['url']; ?>);"></div>
 
 		<div class="text column">
 			<div class="table">
@@ -90,13 +80,8 @@
 			</div>
 		</div>
 
-		<div class="image column">
-	
-			<?php $feature_one_image = get_field('feature_one_image'); if ($feature_one_image): ?>
-			<img src="<?php echo $feature_one_image['url']; ?>">
-			<?php endif; ?>
-		
-		</div>
+		<?php $feature_one_image = get_field('feature_one_image'); ?>
+		<div class="image column" style="background-image: url(<?php echo $feature_one_image['url']; ?>);"></div>
 				
 	</div>
 
@@ -107,6 +92,9 @@
 
 	<div class="wrap">
 
+		<?php $feature_two_image = get_field('feature_two_image'); ?>
+		<div class="image column" style="background-image: url(<?php echo $feature_two_image['url']; ?>);"></div>
+
 		<div class="text column">
 			<div class="table">
 				<div class="cell">
@@ -115,15 +103,7 @@
 				</div>
 			</div>
 		</div>	
-
-		<div class="image column">
-	
-			<?php $feature_two_image = get_field('feature_two_image'); if ($feature_two_image): ?>
-			<img src="<?php echo $feature_two_image['url']; ?>">
-			<?php endif; ?>
-		
-		</div>
-				
+						
 	</div>
 
 </section>
@@ -142,3 +122,7 @@
 
 </section>
 <?php endif; ?>
+
+<section id="the_wall">
+	<?php echo PP_Social_Wall::display_pp_soicial_wall(); ?>
+</section>
