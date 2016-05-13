@@ -344,7 +344,7 @@ pre { padding: 2rem; background: #f9f9f9; overflow-wrap: break-word; word-wrap: 
 @media screen and (min-width: 960px) { #work .items .item.three { width: 25%; border-left: 10px solid white; border-top: 10px solid white; border-right: 10px solid white; margin-bottom: 0; } }
 @media screen and (min-width: 240px) { #work .items .item.four { float: left; width: 100%; margin-bottom: 1rem; } }
 @media screen and (min-width: 960px) { #work .items .item.four { width: 25%; border-left: 10px solid white; border-top: 10px solid white; } }
-#work .more { float: left; width: 100%; text-align: center; padding: 2rem 0; background: #333; margin-bottom: 2.5rem; }
+#work .more { float: left; width: 100%; text-align: center; padding: 2rem 0; background: #333; margin-bottom: 0; }
 #work .more a { color: white; }
 
 #portfolio { padding-top: 6rem; }
@@ -510,3 +510,5 @@ footer .site-info .social-media a span { border: 2px solid #fff; border-radius: 
 .error404 #primary { height: 100%; background-size: cover; background-position: 50%; }
 .error404 #primary header.page-header { height: 100vh; background: rgba(255, 255, 255, 0.4); }
 .error404 #primary h1.page-title { position: absolute; top: 50%; width: 100%; left: 0; text-align: center; font-size: 4rem; text-transform: uppercase; }
+
+/*# sourceMappingURL=style.css.map */
