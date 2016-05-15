@@ -131,16 +131,13 @@ add_action( 'widgets_init', 'pp_widgets_init' );
  * Enqueue scripts and styles.
  */
 function pp_scripts() {
-	wp_enqueue_style( 'pp-tooltip-css', get_template_directory_uri() . '/css/jquery.powertip.min.css' );
 	wp_enqueue_style( 'pp-fa', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' );
 	wp_enqueue_style( 'pp-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'jquery');
 	wp_enqueue_script( 'pp-mh', get_template_directory_uri() . '/js/jquery.matchHeight-min.js', '', '', true );
-	wp_enqueue_script( 'pp-tooltip', get_template_directory_uri() . '/js/jquery.powertip.min.js', '', '', true );
 	wp_enqueue_script( 'pp-navigation', get_template_directory_uri() . '/js/navigation.js', '', '', true );
 	wp_enqueue_script( 'pp-wow', get_template_directory_uri() . '/js/wow.js', '', '', true );
-	wp_enqueue_script( 'pp-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', '', '', true );
 }
 add_action( 'wp_enqueue_scripts', 'pp_scripts' );
 
