@@ -1,12 +1,6 @@
 *.codekit
 
 **/.sass-cache/*
-*.map
 
 *.map
-
-*.map
-
-*.map
-
-*.map
+*.codekit
