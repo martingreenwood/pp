@@ -29,21 +29,24 @@
 		}
 	}
 
-	#edd_sl_renewal_fields {
-		background-color: #fff6bf;
-		color: shade(#fff6bf, 60%);
-		display: block;
-		margin-bottom: $base-spacing / 2;
-		padding: $base-spacing / 2;
-		text-align: center;
+	#edd_checkout_form_wrap {
 
-		a {
-			color: shade(#fff6bf, 70%);
-			text-decoration: underline;
+		#edd_sl_renewal_fields {
+			background-color: #fff6bf;
+			color: shade(#fff6bf, 60%);
+			display: block;
+			margin-bottom: $base-spacing / 2;
+			padding: $base-spacing / 2;
+			text-align: center;
 
-			&:focus,
-			&:hover {
-				color: shade(#fff6bf, 90%);
+			a {
+				color: shade(#fff6bf, 70%);
+				text-decoration: underline;
+
+				&:focus,
+				&:hover {
+					color: shade(#fff6bf, 90%);
+				}
 			}
 		}
 	}
