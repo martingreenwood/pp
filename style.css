@@ -514,7 +514,6 @@ footer .site-info .social-media a span { border: 2px solid #fff; border-radius: 
 .edd-checkout #page #primary.inner article { text-align: left; }
 .edd-checkout #page #primary.inner article #edd_checkout_cart td, .edd-checkout #page #primary.inner article #edd_checkout_cart th { padding: 15px; }
 .edd-checkout #page #primary.inner article #edd_checkout_cart #edd_checkout_form_wrap .edd-cart-adjustment { padding: 10px 0; border-top: 1px solid #ccc; margin-top: 10px; }
-
-#edd_sl_renewal_fields { background-color: #e5edf8; color: #5c5f63; display: block; margin-bottom: 0.75em; padding: 0.75em; text-align: center; }
-#edd_sl_renewal_fields a { color: #45474a; text-decoration: underline; }
-#edd_sl_renewal_fields a:focus, #edd_sl_renewal_fields a:hover { color: #171819; }
+.edd-checkout #edd_sl_renewal_fields { background-color: #fff6bf; color: #66624c; display: block; margin-bottom: 0.75em; padding: 0.75em; text-align: center; }
+.edd-checkout #edd_sl_renewal_fields a { color: #4d4a39; text-decoration: underline; }
+.edd-checkout #edd_sl_renewal_fields a:focus, .edd-checkout #edd_sl_renewal_fields a:hover { color: #1a1913; }
