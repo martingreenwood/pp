@@ -26,7 +26,7 @@ get_header(); ?>
 	</section>
 
 	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main container" role="main">
 
 		<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -37,80 +37,78 @@ get_header(); ?>
 
 		<?php endif; ?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+		</main>
+	</section>
 
 	<section id="work">
-
 		<div class="items">
-
-		<?php
-		$feature_project_one = get_field('feature_project_one');
-		if( $feature_project_one ): $post = $feature_project_one; setup_postdata( $post ); ?>
-			<div class="item one">
-				<a href="<?php the_permalink(); ?>">
-				<div class="ovelay">
-					<div class="tip">
-						<h3><?php the_title(); ?></h3>
-						<span><?php the_field('project_type'); ?></span>
-					</div>					
+			<div class="column">
+			<?php
+			$feature_project_one = get_field('feature_project_one');
+			if( $feature_project_one ): $post = $feature_project_one; setup_postdata( $post ); ?>
+				<div class="item one" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>);">
+					<a href="<?php the_permalink(); ?>">
+					<div class="ovelay">
+						<div class="tip">
+							<h3><?php the_title(); ?></h3>
+							<span><?php the_field('project_type'); ?></span>
+						</div>					
+					</div>
+					</a>
 				</div>
-				<?php the_post_thumbnail('home-square'); ?>
-				</a>
+			    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+			<?php endif; ?>
 			</div>
-		    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-		<?php endif; ?>
 
-		<?php
-		$feature_project_one = get_field('feature_project_two');
-		if( $feature_project_one ): $post = $feature_project_one; setup_postdata( $post ); ?>
-			<div class="item two">			
-				<a href="<?php the_permalink(); ?>">
-				<div class="ovelay">
-					<div class="tip">
-						<h3><?php the_title(); ?></h3>
-						<span><?php the_field('project_type'); ?></span>
-					</div>					
+			<div class="column">
+			<?php
+			$feature_project_one = get_field('feature_project_two');
+			if( $feature_project_one ): $post = $feature_project_one; setup_postdata( $post ); ?>
+				<div class="item two" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>);">
+					<a href="<?php the_permalink(); ?>">
+					<div class="ovelay">
+						<div class="tip">
+							<h3><?php the_title(); ?></h3>
+							<span><?php the_field('project_type'); ?></span>
+						</div>					
+					</div>
+					</a>
 				</div>
-				<?php the_post_thumbnail('home-wide'); ?>
-				</a>
-			</div>
-		    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-		<?php endif; ?>
+			    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+			<?php endif; ?>
 
-		<?php
-		$feature_project_one = get_field('feature_project_three');
-		if( $feature_project_one ): $post = $feature_project_one; setup_postdata( $post ); ?>
-			<div class="item three">
-				<a href="<?php the_permalink(); ?>">
-				<div class="ovelay">
-					<div class="tip">
-						<h3><?php the_title(); ?></h3>
-						<span><?php the_field('project_type'); ?></span>
-					</div>					
+			<?php
+			$feature_project_one = get_field('feature_project_three');
+			if( $feature_project_one ): $post = $feature_project_one; setup_postdata( $post ); ?>
+				<div class="item three" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>);">
+					<a href="<?php the_permalink(); ?>">
+					<div class="ovelay">
+						<div class="tip">
+							<h3><?php the_title(); ?></h3>
+							<span><?php the_field('project_type'); ?></span>
+						</div>					
+					</div>
+					</a>
 				</div>
-				<?php the_post_thumbnail('home-small'); ?>
-				</a>
-			</div>
-		    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-		<?php endif; ?>
+			    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+			<?php endif; ?>
 
-		<?php
-		$feature_project_one = get_field('feature_project_four');
-		if( $feature_project_one ): $post = $feature_project_one; setup_postdata( $post ); ?>
-			<div class="item four">
-				<a href="<?php the_permalink(); ?>">
-				<div class="ovelay">
-					<div class="tip">
-						<h3><?php the_title(); ?></h3>
-						<span><?php the_field('project_type'); ?></span>
-					</div>					
+			<?php
+			$feature_project_one = get_field('feature_project_four');
+			if( $feature_project_one ): $post = $feature_project_one; setup_postdata( $post ); ?>
+				<div class="item four" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>);">
+					<a href="<?php the_permalink(); ?>">
+					<div class="ovelay">
+						<div class="tip">
+							<h3><?php the_title(); ?></h3>
+							<span><?php the_field('project_type'); ?></span>
+						</div>					
+					</div>
+					</a>
 				</div>
-				<?php the_post_thumbnail('home-small-alt'); ?>
-				</a>
+			    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+			<?php endif; ?>
 			</div>
-		    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-		<?php endif; ?>
 
 		</div>
 		<div class="more">

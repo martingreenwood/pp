@@ -11,10 +11,13 @@
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+
+		<?php the_post_thumbnail('full'); ?>
+
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta">
-			<?php pp_posted_on(); ?>
+			Posted on <?php the_date(); ?> | <?php the_category(", "); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 

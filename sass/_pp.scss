@@ -18,6 +18,10 @@ html {
 	background: #222222;
 }
 
+.screen-reader-text {
+	display: none;
+}
+
 .table {
 	display: table;
 	width: 100%;
@@ -29,6 +33,11 @@ html {
 	width: 100%;
 	height: 100%;
 	vertical-align: middle;
+}
+
+.container {
+	@include outer-container();
+	position: relative;
 }
 
 body {
@@ -85,31 +94,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	@include media($small-screen-up) {
-		font-size: rem(26);
-	}
+	font-size: rem(26);
+	
 	@include media($medium-screen-up) {
 	}
+	
 	@include media($large-screen-up) {
 		font-size: rem(36);
 	}
 }
 
 h2 {
-	@include media($small-screen-up) {
-		font-size: rem(24);
-	}
+	font-size: rem(24);
+
 	@include media($medium-screen-up) {
 	}
+	
 	@include media($large-screen-up) {
 		font-size: rem(34);
 	}
 }
 
 h3 {
-	@include media($small-screen-up) {
-		font-size: rem(20);
-	}
+	font-size: rem(20);
+	
 	@include media($medium-screen-up) {
 	}
 	@include media($large-screen-up) {
@@ -118,9 +126,8 @@ h3 {
 }
 
 h4 {
-	@include media($small-screen-up) {
-		font-size: rem(18);
-	}
+	font-size: rem(18);
+
 	@include media($medium-screen-up) {
 	}
 	@include media($large-screen-up) {
@@ -197,16 +204,15 @@ pre {
 // HEADER
 
 #header {
-	@include media($small-screen-up) {
-		position: fixed;
-		width: 100%;
-		left: 0;
-		top: 0;
-		padding: 1rem;
-		z-index: 20;
-		background-color: #ffffff;
-		transition: all 0.3s;	
-	}
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	padding: 1rem;
+	z-index: 20;
+	background-color: #ffffff;
+	transition: all 0.3s;	
+
 	@include media($medium-screen-up) {
 	}
 	@include media($large-screen-up) {
@@ -232,11 +238,9 @@ pre {
 
 	.site-header {
 
-		.site-branding{
+		.site-branding{			
+			@include span-columns(1);
 
-			@include media($small-screen-up) {
-				@include span-columns(1);
-			}
 			@include media($medium-screen-up) {
 			}
 			@include media($large-screen-up) {
@@ -245,10 +249,8 @@ pre {
 		}
 
 		.main-navigation{
-			
-			@include media($small-screen-up) {
-				@include span-columns(1);
-			}
+			@include span-columns(1);
+
 			@include media($medium-screen-up) {
 			}
 			@include media($large-screen-up) {
@@ -257,12 +259,10 @@ pre {
 			}
 
 			.menu-main-container {
+				display: table;
+				width: 100%;
+				text-align: center;
 
-				@include media($small-screen-up) {
-					display: table;
-					width: 100%;
-					text-align: center;
-				}
 				@include media($medium-screen-up) {
 				}
 				@include media($large-screen-up) {
@@ -325,15 +325,13 @@ pre {
 	}
 
 	.menu-toggle {
+		width: 40px;
+		height: 30px;
+		position: absolute;
+		top: 22px;
+		right: 20px;
+		cursor: pointer;
 
-		@include media($small-screen-up) {
-			width: 40px;
-			height: 30px;
-			position: absolute;
-			top: 22px;
-			right: 20px;
-			cursor: pointer;
-		}
 		@include media($medium-screen-up) {
 		}
 		@include media($large-screen-up) {
@@ -429,10 +427,8 @@ pre {
 }
 
 .cinfo {
+	display: none;
 
-	@include media($small-screen-up) {
-		display: none;
-	}
 	@include media($medium-screen-up) {
 		display: block;
 		margin-right: 5rem;
@@ -463,20 +459,18 @@ pre {
 	#primary {
 
 		article {
-			@include outer-container();
 			position: relative;
 
 			.bg {
-				@include media($small-screen-up) {
-					position: absolute;
-					max-width: 320px;
-					max-height: 320px;
-					top: 120px;
-					left: 50%;
-					margin-left: -300px;
-					height: 100%;
-					width: 100%;
-				}
+				position: absolute;
+				max-width: 320px;
+				max-height: 320px;
+				top: 120px;
+				left: 50%;
+				margin-left: -300px;
+				height: 100%;
+				width: 100%;
+
 				@include media($medium-screen-up) {
 				}
 				@include media($large-screen-up) {
@@ -498,11 +492,8 @@ pre {
 			}
 
 			.columns {
+				@include span-columns(1);
 
-
-				@include media($small-screen-up) {
-					@include span-columns(1);
-				}
 				@include media($medium-screen-up) {
 				}
 				@include media($large-screen-up) {
@@ -513,10 +504,9 @@ pre {
 				.column {
 
 					&.half {
-						@include media($small-screen-up) {
-							@include span-columns(1 of 1);
-							text-align: left;
-						}
+						@include span-columns(1 of 1);
+						text-align: left;
+
 						@include media($medium-screen-up) {
 						}
 						@include media($large-screen-up) {
@@ -528,11 +518,9 @@ pre {
 			}
 	
 			.text {
+				@include span-columns(1);
+				padding: 150px 0;
 
-				@include media($small-screen-up) {
-					@include span-columns(1);
-					padding: 150px 0;
-				}
 				@include media($medium-screen-up) {
 				}
 				@include media($large-screen-up) {
@@ -679,11 +667,10 @@ pre {
 			text-align: center;
 
 			li {
-				@include media($small-screen-up) {
-					float: left;
-					text-align: center;
-					width: 100%;
-				}
+				float: left;
+				text-align: center;
+				width: 100%;
+
 				@include media($medium-screen-up) {
 				}
 				@include media($large-screen-up) {
@@ -691,10 +678,9 @@ pre {
 				}
 
 				img {
-					@include media($small-screen-up) {
-						display: inline-block;
-						margin: 2rem 0;
-					}
+					display: inline-block;
+					margin: 2rem 0;
+
 					@include media($medium-screen-up) {
 					}
 					@include media($large-screen-up) {
@@ -707,14 +693,12 @@ pre {
 	}
 
 	#whatwedo {
+		@include outer-container(100%);
+		background: #f9f9f9;
+		padding: 6rem 2rem;
+		text-align: center;
+		margin-top: 6rem;
 
-		@include media($small-screen-up) {
-			@include outer-container(100%);
-			background: #f9f9f9;
-			padding: 6rem 2rem;
-			text-align: center;
-			margin-top: 6rem;
-		}
 		@include media($medium-screen-up) {
 		}
 		@include media($large-screen-up) {
@@ -735,10 +719,9 @@ pre {
 			}
 
 			.list {
-				@include media($small-screen-up) {
-					@include span-columns(1);
-					margin-bottom: 2rem;
-				}
+				@include span-columns(1);
+				margin-bottom: 2rem;
+
 				@include media($medium-screen-up) {
 				}
 				@include media($large-screen-up) {
@@ -1114,11 +1097,27 @@ $parallax-background-height: $parallax-window-height * 1.1;
 	.items {
 		float: left;
     	width: 100%;
+
+    	.column {
+    		width:100%;
+    		float: left;
+    		height: 450px;
+
+    		@include media($large-screen-up) {
+				width:50%;
+				height: 666px;
+    		}
+    	}
 		
 		.item {
 			position: relative;
-			display: inline-block;
-			background: black;
+			background-size: cover;
+			background-position: center;
+			height: 100%;
+			width: 100%;
+			float: left;
+			display: block;
+			background-color: black;
 
 			a {
 				width: 100%;
@@ -1170,64 +1169,20 @@ $parallax-background-height: $parallax-window-height * 1.1;
 			}
 			
 			&.one {
+			}
 
-				@include media($small-screen-up) {
-					float: left;
-					width: 100%;
-					margin-bottom: 1rem;
-				}
-				@include media($medium-screen-up) {
-				}
-				@include media($large-screen-up) {
-					width: 50%;
-			    	border-right: 10px solid white;
-					margin-bottom: 0;
-				}
-			}
 			&.two {
-				@include media($small-screen-up) {
-					float: left;
-					width: 100%;
-					margin-bottom: 1rem;
-				}
-				@include media($medium-screen-up) {
-				}
-				@include media($large-screen-up) {
-					width: 50%;
-			    	border-left: 10px solid white;
-					border-bottom: 10px solid white;
-					margin-bottom: 0;
-				}
+				height: 50%;
 			}
+
 			&.three {
-				@include media($small-screen-up) {
-					float: left;
-					width: 100%;
-					margin-bottom: 1rem;
-				}
-				@include media($medium-screen-up) {
-				}
-				@include media($large-screen-up) {
-					width: 25%;
-			    	border-left: 10px solid white;
-    				border-top: 10px solid white;
-			    	border-right: 10px solid white;
-			    	margin-bottom: 0;
-				}
+				height: 50%;
+				width: 50%;
 			}
+
 			&.four {
-				@include media($small-screen-up) {
-					float: left;
-					width: 100%;
-					margin-bottom: 1rem;
-				}
-				@include media($medium-screen-up) {
-				}
-				@include media($large-screen-up) {
-					width: 25%;
-					border-left: 10px solid white;
-    				border-top: 10px solid white;
-				}
+				height: 50%;
+				width: 50%;
 			}
 		}
 	}
@@ -1251,12 +1206,10 @@ $parallax-background-height: $parallax-window-height * 1.1;
 	padding-top: 6rem;
 
 	.section {
+		width: 100%;
+		float: left;
+		overflow: hidden;
 
-		@include media($small-screen-up) {
-			width: 100%;
-			float: left;
-			overflow: hidden;
-		}
 		@include media($medium-screen-up) {
 		}
 		@include media($large-screen-up) {
@@ -1265,12 +1218,10 @@ $parallax-background-height: $parallax-window-height * 1.1;
 		}
 
 		.item {
+			position: relative;
+			width: 100%;
+			border-bottom: 20px solid white;
 
-			@include media($small-screen-up) {
-				position: relative;
-				width: 100%;
-				border-bottom: 20px solid white;
-			}
 			@include media($medium-screen-up) {
 				border-right: 10px solid white;
 				border-left: 10px solid white;
@@ -1341,11 +1292,9 @@ $parallax-background-height: $parallax-window-height * 1.1;
 			}
 
 			&.empty {
+				background: $brand-primary;
+				display: none;
 
-				@include media($small-screen-up) {
-					background: $brand-primary;
-					display: none;
-				}
 				@include media($medium-screen-up) {
 				}
 				@include media($large-screen-up) {
@@ -1357,9 +1306,8 @@ $parallax-background-height: $parallax-window-height * 1.1;
 		&.two {
 
 			.two {
-				@include media($small-screen-up) {
-					height: 0;
-				}
+				height: 0;
+
 				@include media($medium-screen-up) {
 				}
 				@include media($large-screen-up) {
@@ -1383,10 +1331,9 @@ $parallax-background-height: $parallax-window-height * 1.1;
 			margin-bottom: 0;
 
 			.item {
-				@include media($small-screen-up) {
-					width: 100%;
-					float: left;
-				}
+				width: 100%;
+				float: left;
+
 				@include media($medium-screen-up) {
 				}
 				@include media($large-screen-up) {
@@ -1395,13 +1342,11 @@ $parallax-background-height: $parallax-window-height * 1.1;
 				}
 
 				&.five, &.six {
-					height: 0;
+					height: 172px; 
 
-					@include media($small-screen-up) {
-						height: 172px; 
-					}
 					@include media($medium-screen-up) {
 					}
+
 					@include media($large-screen-up) {
 						height: 293px;
 					}
@@ -1436,10 +1381,8 @@ $parallax-background-height: $parallax-window-height * 1.1;
 			}
 
 			.empty {
+				height: 172px; 
 
-				@include media($small-screen-up) {
-					height: 172px; 
-				}
 				@include media($medium-screen-up) {
 				}
 				@include media($large-screen-up) {
@@ -1533,17 +1476,15 @@ $parallax-background-height: $parallax-window-height * 1.1;
 	}
 
 	.slide-text {
+		position: absolute;
+		top: 0;
+		right: auto;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255,255,255,0.6);
+		display: table;
+		bottom: 0;
 
-		@include media($small-screen-up) {
-			position: absolute;
-			top: 0;
-			right: auto;
-			width: 100%;
-			height: 100%;
-			background-color: rgba(255,255,255,0.6);
-			display: table;
-			bottom: 0;
-		}
 		@include media($medium-screen-up) {
 		}
 		@include media($large-screen-up) {
@@ -1553,12 +1494,10 @@ $parallax-background-height: $parallax-window-height * 1.1;
 		}
 
 		.text {
+			display: table-cell;
+			vertical-align: middle;
+		    padding-top: 45px;
 
-			@include media($small-screen-up) {
-				display: table-cell;
-				vertical-align: middle;
-			    padding-top: 45px;
-			}
 			@include media($medium-screen-up) {
 			}
 			@include media($large-screen-up) {
@@ -1566,12 +1505,10 @@ $parallax-background-height: $parallax-window-height * 1.1;
 			}
 
 			h2 {
+				width: 92%;
+				margin: 0 auto;
+				font-size: rem(30);
 
-				@include media($small-screen-up) {
-					width: 92%;
-					margin: 0 auto;
-					font-size: rem(30);
-				}
 				@include media($medium-screen-up) {
 				}
 				@include media($large-screen-up) {
@@ -1603,12 +1540,10 @@ $parallax-background-height: $parallax-window-height * 1.1;
 		    padding-top: 90px;
 
 			article {
+				width: 90%;
+				margin-left: auto;
+				margin-right: auto;
 
-				@include media($small-screen-up) {
-					width: 90%;
-					margin-left: auto;
-					margin-right: auto;
-				}
 				@include media($medium-screen-up) {
 				}
 				@include media($large-screen-up) {
@@ -1935,11 +1870,10 @@ $parallax-background-height: $parallax-window-height * 1.1;
 			padding: 6rem 0;
 
 			blockquote {
-				@include media($small-screen-up) {
-					@include span-columns(1);
-					margin: 0;
-					text-align: center;
-				}
+				@include span-columns(1);
+				margin: 0;
+				text-align: center;
+
 				@include media($medium-screen-up) {
 				}
 				@include media($large-screen-up) {
@@ -1962,99 +1896,155 @@ $parallax-background-height: $parallax-window-height * 1.1;
 
 //  ARTICLES / BLOGS
 
-#article {
-	@include outer-container;
-	padding: 6rem 0;
+.blog, .archive, .single {
+	background: #f9f9f9;
+	border-color: #f9f9f9;
 
-	#primary {
+	.post-navigation {
+		float: left;
+		width: 100%;
+		background: white;
+		padding: 2rem;
 
-		@include span-columns(12);
-
-		@include media($medium-screen-up) {}
-	
-		@include media($large-screen-up) {
-			@include span-columns(8);
+		.nav-previous {
+			float: left;
+			width: 40%;
 		}
 
-		.entry-header {
-			border-bottom: 1px solid #ccc;
-			padding-bottom: 1rem;
-			margin-bottom: 2rem;
-
-			.entry-title {
-				margin: 0;
-				line-height: 1.4;
-			}
-
-			.entry-meta {
-				color: #878787;
-			}
+		.nav-next {
+			float: right;
+			width: 40%;
+			text-align: right;
 		}
-
-		blockquote {
-			border-left: 3px solid #333;
-			margin: 0;
-			padding: 0.5rem 0.5rem 0.5rem 2rem;
-			font-weight: 500;
-			font-size: 1.2rem;
-			background: #f9f9f9;
-			margin-bottom: 1rem;
-		}
-
-		h3 {
-			text-transform: uppercase;
-			font-size: 1.3rem;
-		}
-
-
 	}
 
-	#secondary {
-	    padding: 2rem;
-	    background: #f9f9f9;
+	header.page-header {
+		background: white;
+		padding: 2rem;
+		margin-bottom: 2rem;
 
-		@include span-columns(12);
-
-		@include media($medium-screen-up) {
-	
+		h1 {
+			margin: 0;
+			line-height: inherit;
+			text-transform: uppercase;
+			font-size: 26px;
+			font-weight: 400;
 		}
-	
-		@include media($large-screen-up) {
-			@include span-columns(4);
-		}
+	}
 
-		aside {
-			margin-bottom: 1rem;
-			padding-bottom: 1rem;
-			border-bottom: 1px solid #ccc;
+	#content {
+		@include row;
+		padding: 11.5rem 0 0;
+		border-color: #f9f9f9;
 
-			.widget-title {
-				text-transform: uppercase;
-				font-size: 1.4rem;
-				font-weight: 500;
-				margin: 0 0 0.75rem 0;
-			}			
-		}
+		article, .post {
+			@include span-columns(1);
+			margin-bottom: 2rem;
+			background: #ffffff;
+			padding: 2rem;
+
+			@include media($medium-screen-up) {
+				@include span-columns(6);
+			}
 		
+			@include media($large-screen-up) {
+				@include span-columns(6);
+			}
+
+			&:first-of-type {
+				@include span-columns(1);
+
+				@include media($medium-screen-up) {
+					@include span-columns(6);
+				}
+			
+				@include media($large-screen-up) {
+					@include span-columns(12);
+				}
+			}
+
+			.entry-header {
+				margin-bottom: 1rem;
+
+				img {
+					margin-bottom: 1rem;
+				}
+
+				.entry-title {
+					margin: 0;
+					line-height: 1.4;
+				}
+
+				.entry-meta {
+					color: #878787;
+				}
+			}
+
+			blockquote {
+				border-left: 3px solid #333;
+				margin: 0;
+				padding: 0.5rem 0.5rem 0.5rem 2rem;
+				font-weight: 500;
+				font-size: 1.2rem;
+				background: #f9f9f9;
+				margin-bottom: 1rem;
+			}
+
+			h3 {
+				text-transform: uppercase;
+				font-size: 1.3rem;
+			}
+
+
+		}
+
+		#secondary {
+		    padding: 2rem;
+		    background: #f9f9f9;
+
+			@include span-columns(12);
+
+			@include media($medium-screen-up) {
+		
+			}
+		
+			@include media($large-screen-up) {
+				@include span-columns(4);
+			}
+
+			aside {
+				margin-bottom: 1rem;
+				padding-bottom: 1rem;
+				border-bottom: 1px solid #ccc;
+
+				.widget-title {
+					text-transform: uppercase;
+					font-size: 1.4rem;
+					font-weight: 500;
+					margin: 0 0 0.75rem 0;
+				}			
+			}
+			
+		}
 	}
 }
 
 // FOOTER
 
 footer {
-	@include media($small-screen-up) {
 	position: relative;
 	padding: 2.2rem;
 	background-color: #222222;
 	width: 100%;
-	}
+
 	@include media($medium-screen-up) {
 	}
+
 	@include media($large-screen-up) {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	z-index: -1;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
 	}
 
 	.site-info {
@@ -2066,11 +2056,9 @@ footer {
 		}
 
 		.social-media {
+			@include span-columns(1);
+			margin-bottom: 15px;
 
-			@include media($small-screen-up) {
-				@include span-columns(1);
-				margin-bottom: 15px;
-			}
 			@include media($medium-screen-up) {
 			}
 			@include media($large-screen-up) {
@@ -2094,14 +2082,15 @@ footer {
 		}
 
 		.address {
-			@include media($small-screen-up) {
-				@include span-columns(1);
-				font-size: em(15);
-				line-height: 1.1;
-				margin-bottom: 15px;
-			}
+			@include span-columns(1);
+			font-size: em(15);
+			line-height: 1.1;
+			margin-bottom: 15px;
+
 			@include media($medium-screen-up) {
+			
 			}
+			
 			@include media($large-screen-up) {
 				@include span-columns(3);
 				margin-bottom: 0;
@@ -2109,14 +2098,14 @@ footer {
 		}
 
 		.phone {
-			@include media($small-screen-up) {
-				@include span-columns(1);
-				font-size: em(15);
-				line-height: 1.1;
-				margin-bottom: 15px;
-			}
+			@include span-columns(1);
+			font-size: em(15);
+			line-height: 1.1;
+			margin-bottom: 15px;
+
 			@include media($medium-screen-up) {
 			}
+
 			@include media($large-screen-up) {
 				@include span-columns(3);
 				margin-bottom: 0;
