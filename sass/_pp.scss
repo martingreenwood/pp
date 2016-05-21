@@ -2190,3 +2190,52 @@ footer {
 		}
 	}
 }
+
+.single-ticket {
+	
+	#page {
+		
+		#primary.inner { 
+			
+			article {
+				padding: 20px;
+				text-align: left;
+
+				span.wpas-label {
+					padding: 6px;
+					display: inline-block;
+					color: white;
+					font-weight: bold;
+					width: 50%;
+					text-align: center;
+				}
+
+				.wpas-reply-meta, .wpas-reply-content {
+					padding-left: 20px;
+				}
+
+				.wpas-reply-time, .wpas-reply-user {
+					display: inline-block;
+				}
+
+				.wpas-pagi {
+					margin-bottom: 60px;
+				}
+
+				.wpas-form {
+					text-align: right;
+
+					.checkbox {
+						display: inline-block;
+					}
+
+					.wpas-btn-default {
+						display: inline-block;
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
