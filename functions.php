@@ -145,6 +145,14 @@ add_action( 'wp_enqueue_scripts', 'pp_scripts' );
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
 
+// REMOVE ADMIN BAR FOR EVERYINE BUT ADMIN
+add_action('after_setup_theme', 'remove_admin_bar');
+function remove_admin_bar() {
+	if (!current_user_can('administrator') && !is_admin()) {
+		show_admin_bar(false);
+	}
+}
+
 /**
  * Custom template tags for this theme.
  */
