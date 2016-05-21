@@ -526,6 +526,15 @@ footer .site-info .phone:last-child { margin-right: 0; }
 .error404 #primary header.page-header { height: 100vh; background: rgba(255, 255, 255, 0.4); }
 .error404 #primary h1.page-title { position: absolute; top: 50%; width: 100%; left: 0; text-align: center; font-size: 4rem; text-transform: uppercase; }
 
+.submit-ticket { background: #f9f9f9; border-color: #f9f9f9; }
+.submit-ticket #content { padding-top: 150px; border-color: #f9f9f9; }
+.submit-ticket #content .wpas-form { float: left; display: block; margin-right: 25.641025641%; width: 100%; background-color: #ffffff; }
+.submit-ticket #content .wpas-form:last-child { margin-right: 0; }
+@media screen and (min-width: 640px) { .submit-ticket #content .wpas-form { float: left; display: block; margin-right: 3.5211267606%; width: 100%; margin-bottom: 30px; }
+  .submit-ticket #content .wpas-form:last-child { margin-right: 0; } }
+@media screen and (min-width: 960px) { .submit-ticket #content .wpas-form { float: left; display: block; margin-right: 1.7301038062%; width: 49.1349480969%; }
+  .submit-ticket #content .wpas-form:last-child { margin-right: 0; } }
+
 .edd-checkout #page #primary.inner article { text-align: left; }
 .edd-checkout #page #primary.inner article #edd_checkout_cart td, .edd-checkout #page #primary.inner article #edd_checkout_cart th { padding: 15px; }
 .edd-checkout #page #primary.inner article #edd_checkout_cart #edd_checkout_form_wrap .edd-cart-adjustment { padding: 10px 0; border-top: 1px solid #ccc; margin-top: 10px; }

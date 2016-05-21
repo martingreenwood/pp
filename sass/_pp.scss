@@ -2143,3 +2143,30 @@ footer {
 		}
 	}
 }
+
+
+// ticketing
+
+.submit-ticket {
+	background: #f9f9f9;
+	border-color: #f9f9f9;
+
+	#content {
+		padding-top: 150px;
+		border-color: #f9f9f9;
+
+		.wpas-form {
+			@include span-columns(1);
+			background-color: #ffffff;
+
+			@include media($medium-screen-up) {
+				@include span-columns(6);
+				margin-bottom: 30px;
+			}
+
+			@include media($large-screen-up) {
+				@include span-columns(6);
+			}
+		}
+	}
+}
