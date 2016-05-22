@@ -122,7 +122,3 @@
 
 </section>
 <?php endif; ?>
-
-<section id="the_wall">
-	<?php echo PP_Social_Wall::display_pp_soicial_wall(); ?>
-</section>
