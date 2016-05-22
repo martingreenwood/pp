@@ -564,7 +564,7 @@ pre {
 			}
 
 			article {
-				padding: 10rem 0 0 0;
+				padding: 8rem 0 0 0;
 				text-align: center;
 
 				.gforms_confirmation_message {
@@ -1057,18 +1057,18 @@ pre {
 
 // PARALLAX / Based on http://codepen.io/skeurentjes/
 
-$parallax-window-height: 64em;
+$parallax-window-height: 600px;
 $parallax-background-height: $parallax-window-height * 1.1;
 
 .parallax-window {
 	//min-height: $parallax-window-height / 2;
 	//max-height: $parallax-window-height / 2;
-	height: 100vh;
+	//height: 100vh;
+	height: 450px;
 	overflow: hidden;
 	position: relative;
 	text-align: center;
 	width: 100%;
-	border-bottom: 40px solid white;
 }
 
 .parallax-static-content {
@@ -1082,10 +1082,10 @@ $parallax-background-height: $parallax-window-height * 1.1;
 	background-position: top;
 	background-size: cover;
 	background-color: beige;
-	height: $parallax-background-height;
+	height: 100%;
 	left: 0;
 	position: absolute;
-	top: - $parallax-window-height / 3;
+	//top: - $parallax-window-height / 2;
 	width: 100%;
 }
 
@@ -1578,7 +1578,7 @@ $parallax-background-height: $parallax-window-height * 1.1;
 		border-bottom: 40px solid white;
 	}
 
-	.post-navigation {
+	#main .post-navigation {
 
     	h2 {
     		display: none;
@@ -1586,16 +1586,10 @@ $parallax-background-height: $parallax-window-height * 1.1;
 		
 		.nav-next {
 			right: 0;
-			background-image: url(assets/right.svg);
-			background-position: 10px center;
-
 		}
 
 		.nav-previous {
 			left: 0;
-			background-image: url(assets/left.svg);
-			background-position: 15px center;
-
 		}
 		
 		.nav-next, .nav-previous {
@@ -1614,6 +1608,7 @@ $parallax-background-height: $parallax-window-height * 1.1;
 
 			a {
 				display: block;
+				position: relative;
 				float: left;
 				width: 100%;
 				line-height: 70px;
@@ -1622,7 +1617,7 @@ $parallax-background-height: $parallax-window-height * 1.1;
 			}
 
 			&:hover {
-				width: 240px;
+				width: 260px;
 			}
 		}
 
@@ -1631,7 +1626,21 @@ $parallax-background-height: $parallax-window-height * 1.1;
 			text-align: right;
 
 			a {
+				text-align: left;
 				padding-left: 20px;
+
+				&:before {
+					content: "";
+					position: fixed;
+					right: 0;
+					height: 70px;
+					width: 60px;
+					background-image: url(assets/right.svg);
+					background-position: center;
+					background-size: 42px;
+					background-repeat: no-repeat;
+				}
+
 			}
 		}
 
@@ -1640,7 +1649,21 @@ $parallax-background-height: $parallax-window-height * 1.1;
 			text-align: left;
 
 			a {
+				text-align: right;
 				padding-right: 20px;
+
+				&:before {
+					content: "";
+					position: fixed;
+					left: 0;
+					height: 70px;
+					width: 60px;
+					background-image: url(assets/left.svg);
+					background-position: center;
+					background-size: 42px;
+					background-repeat: no-repeat;
+				}
+
 			}
 		}
 	}
@@ -1656,10 +1679,9 @@ $parallax-background-height: $parallax-window-height * 1.1;
 
 		header {
 			text-align: center;
-			padding: 6rem 0 0 0;
 
 			h1 {
-				margin: 0 0 10px 0;;
+				margin: 0 0 10px 0;
 				padding: 0;
 			}
 
@@ -1896,7 +1918,7 @@ $parallax-background-height: $parallax-window-height * 1.1;
 
 //  ARTICLES / BLOGS
 
-.blog, .archive, .single {
+.blog, .archive, .single-post {
 	background: #f9f9f9;
 	border-color: #f9f9f9;
 
@@ -2156,7 +2178,6 @@ footer {
 		#primary.inner {
 			
 			article {
-				padding-top: 5rem;
 				text-align: left;
 			}
 		}
@@ -2198,7 +2219,7 @@ footer {
 		#primary.inner { 
 			
 			article {
-				padding: 20px;
+				padding: 2rem;
 				text-align: left;
 
 				span.wpas-label {
@@ -2239,3 +2260,24 @@ footer {
 	}
 }
 
+// shop / downlods
+
+#plugins {
+	padding-top: 8em;
+
+	.product-grid {
+
+		.plugin {
+			@include span-columns(1);
+
+			@include media($medium-screen-up) {
+				@include span-columns(3);
+				margin-bottom: 4rem;
+			}
+
+			@include media($large-screen-up) {
+				@include span-columns(6);
+			}			
+		}
+	}
+}

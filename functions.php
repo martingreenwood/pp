@@ -67,6 +67,7 @@ function pp_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'pp' ),
+		'mobile' => esc_html__( 'Mobile Menu', 'pp' ),
 	) );
 
 	/*
@@ -118,6 +119,16 @@ function pp_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'pp' ),
 		'id'            => 'sidebar-1',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Shop Sidebar', 'pp' ),
+		'id'            => 'sidebar-2',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
